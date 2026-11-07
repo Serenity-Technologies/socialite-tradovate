@@ -25,22 +25,24 @@ already-authenticated user. Do not create users, log users in, or store a `trado
 ## Install
 
 ```bash
-composer require serenity_technologies/socialite-tradovate:^0.1
+composer require serenity_technologies/socialite-tradovate:dev-main
 ```
 
-The package is served from the private GitLab Composer group. If that group is not registered
-globally in `~/.composer/config.json`, add it to the application's `composer.json` first:
+The package is not on Packagist yet. Add the GitHub repository to the application's
+`composer.json` so Composer can resolve it:
 
 ```json
 {
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://gitlab.com/<your-group>/socialite-tradovate.git"
+            "url": "https://github.com/Serenity-Technologies/socialite-tradovate.git"
         }
     ]
 }
 ```
+
+Switch to `:^0.1` once `v0.1.0` is tagged.
 
 While developing against a working copy, use a path repository and remove it once `v0.1.0` is
 tagged:
