@@ -1,0 +1,9 @@
+parameters:
+    level: max
+    paths:
+        - src
+        - tests
+    tmpDir: .phpstan
+    # Socialite declares `refreshToken` as string but leaves it null for providers
+    # that issue no refresh token, which is exactly the Tradovate case.
+    treatPhpDocTypesAsCertain: false
